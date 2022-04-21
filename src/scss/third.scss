@@ -1,0 +1,115 @@
+@import "/dist/css/reset.css";
+@import "_mixins";
+$border_style: 0.5px solid #af7832;
+body {
+  & > *:not(script) {
+  }
+}
+main {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  header {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    div {
+      &:first-child {
+        border-right: $border_style;
+      }
+      &:last-child {
+        border-left: $border_style;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #af7832;
+      }
+    }
+  }
+  .sidebar_left {
+    grid-column: span 1;
+    grid-row: span 5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    div {
+      border-top: $border_style;
+      border-right: $border_style;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #af7832;
+      &:last-child {
+        border-bottom: $border_style;
+      }
+    }
+  }
+  .img {
+    grid-column: span 1;
+    grid-row: span 5;
+    border-top: $border_style;
+    border-bottom: $border_style;
+    background-image: url(/src//img/third_img/1.jpeg);
+  }
+  .sidebar_right {
+    grid-column: span 1;
+    grid-row: span 5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    div {
+      border-top: $border_style;
+      border-left: $border_style;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #af7832;
+      &:last-child {
+        border-bottom: $border_style;
+      }
+    }
+  }
+  footer {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    div {
+      &:first-child {
+        border-right: $border_style;
+      }
+      &:last-child {
+        border-left: $border_style;
+      }
+    }
+  }
+  .hover_ani:hover {
+    transition: 0.5s ease;
+    background-color: #af7832;
+    color: white;
+  }
+  .scroll {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    span {
+      animation: scroll 5s linear infinite;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
