@@ -56,10 +56,10 @@ header {
     font-size: 30px;
     font-weight: 300;
     button {
-      @include button(white);
+      @include sec_button(white);
     }
     button:hover {
-      @include button_hover;
+      @include sec_button_hover;
     }
   }
 }
@@ -89,10 +89,10 @@ header {
       margin-bottom: 50px;
     }
     button {
-      @include button(#fbf7f6);
+      @include sec_button(#fbf7f6);
     }
     button:hover {
-      @include button_hover;
+      @include sec_button_hover;
     }
   }
 }
@@ -136,10 +136,10 @@ header {
     font-size: 20px;
   }
   button {
-    @include button(white);
+    @include sec_button(white);
   }
   button:hover {
-    @include button_hover;
+    @include sec_button_hover;
   }
 }
 .third-content {
@@ -168,10 +168,10 @@ header {
       margin-bottom: 20px;
     }
     button {
-      @include button(#dee8e9);
+      @include sec_button(#dee8e9);
     }
     button:hover {
-      @include button_hover;
+      @include sec_button_hover;
     }
   }
 }
@@ -197,10 +197,10 @@ header {
   justify-content: center;
   margin-bottom: 100px;
   button {
-    @include button(white);
+    @include sec_button(white);
   }
   button:hover {
-    @include button_hover;
+    @include sec_button_hover;
   }
 }
 .journals {
@@ -330,10 +330,10 @@ header {
       font-size: 10px;
     }
     button {
-      @include button(white);
+      @include sec_button(white);
     }
     button:hover {
-      @include button_hover;
+      @include sec_button_hover;
     }
   }
 }
